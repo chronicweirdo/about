@@ -4,25 +4,6 @@
     <meta charset="UTF-8">
     <title>Silviu D. Cacoveanu</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
-    <script type="application/javascript" src="jquery.min.js"></script>
-    <script type="application/javascript" src="ismobile.js"></script>
-    <script type="application/javascript">
-        function setPadding() {
-            var clientHeight = document.documentElement.clientHeight;
-            var bodyHeight = $('body').height();
-            if (bodyHeight < clientHeight) {
-                var padding = (clientHeight - bodyHeight) / 2;
-                $('body').css('padding-top', padding);
-            }
-        }
-        $(document).ready(function() {
-            /*if (isMobile()) {
-                $('p.title').css('font-size', '4em');
-            }
-            setPadding();
-            $(window).resize(setPadding);*/
-        });
-    </script>
     <link rel="stylesheet" type="text/css" href="desktop.css" />
     <link rel="stylesheet" type="text/css" media="only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="mobile.css" />
 
