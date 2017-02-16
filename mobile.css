@@ -13,8 +13,8 @@ sup, sub {
     font-size: 1em;
 }
 h1, p {
-    width: auto;
     margin: 1em 5%;
+    width: 90%;
 }
 a {
     color: black;
