@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Courier New", Courier, monospace;
+}
+h1 {
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+sup, sub {
+    font-size: 1em;
+}
+h1, p {
+    margin: 1em auto;
+    width: 500px;
+}
+a {
+    color: black;
+}
+
+@media screen and (max-width: 500px) {
+    h1, p {
+        width: auto;
+        margin: 1em 5%;
+    }
+}

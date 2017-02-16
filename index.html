@@ -23,43 +23,9 @@
             $(window).resize(setPadding);*/
         });
     </script>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        font-family: "Courier New", Courier, monospace;
-    }
-    h1 {
-        font-weight: bold;
-        font-size: 2em;
-        text-align: center;
-    }
-    sup, sub {
-        font-size: 1em;
-    }
-    h1, p {
-        margin: 1em auto;
-        width: 500px;
-    }
-    a {
-        color: black;
-    }
+    <link rel="stylesheet" type="text/css" media="only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="mobile.css" />
+    <link rel="stylesheet" type="text/css" media="only screen and (min-width: 480px), only screen and (min-device-width: 480px)" href="desktop.css" />
 
-    @media screen and (max-width: 500px) {
-        h1, p {
-            width: auto;
-            margin: 1em 5%;
-        }
-    }
-
-    @media only screen and (max-device-width: 480px) {
-        body {
-            color: red;
-            font-size: 30px;
-        }
-	}
-
-</style>
 </head>
 <body>
     <div id="content">
