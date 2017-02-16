@@ -16,11 +16,11 @@
             }
         }
         $(document).ready(function() {
-            if (isMobile()) {
+            /*if (isMobile()) {
                 $('p.title').css('font-size', '4em');
             }
             setPadding();
-            $(window).resize(setPadding);
+            $(window).resize(setPadding);*/
         });
     </script>
 <style>
@@ -29,20 +29,27 @@
         padding: 0;
         font-family: "Courier New", Courier, monospace;
     }
-    p {
-        margin-left: auto;
-        margin-right: auto;
-        width: 30em;
-        margin-top: 1em;
-    }
-
-    p.title, p.space {
-        margin-top: 0;
-        text-transform: uppercase;
+    h1 {
         font-weight: bold;
         font-size: 2em;
-        width: 15em;
         text-align: center;
+    }
+    sup, sub {
+        font-size: 1em;
+    }
+    h1, p {
+        margin: 1em auto;
+        width: 500px;
+    }
+    a {
+        color: black;
+    }
+
+    @media screen and (max-width: 500px) {
+        h1, p {
+            width: auto;
+            margin: 1em 5%;
+        }
     }
 
     @media only screen and (max-device-width: 480px) {
@@ -51,26 +58,12 @@
         }
 	}
 
-    @media (max-width: 500px) {
-        p, p.title, p.space {
-            padding: 0 5%;
-            margin: 0;
-            width: auto;
-        }
-    }
-    sup.elevated {
-        font-size: 1em;
-    }
-    a {
-        color: black;
-    }
 </style>
 </head>
 <body>
     <div id="content">
-        <p class="title">Silviu<sup class="elevated">Dan</sup></p>
-        <p class="title">Cacoveanu</p>
-        <p class="space">&nbsp;</p>
+        <h1>SILVIU<sup>DAN</sup> CACOVEANU</h1>
+        <!--p class="space">&nbsp;</p-->
         <p>I'm blogging about programming and the pleasure of figuring things out <a href="http://blog.cacoveanu.com" target="_blank">here</a>. Ocasionally drawing a comic at <a href="http://chronicweirdo.com" target="_blank">chronicweirdo.com</a>.</p>
     </div>
 </body>
