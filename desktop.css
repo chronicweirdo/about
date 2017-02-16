@@ -3,25 +3,21 @@
     padding: 0;
     font-family: "Courier New", Courier, monospace;
 }
+body {
+    font-size: 4vh;
+}
 h1 {
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.5em;
     text-align: center;
 }
 sup, sub {
     font-size: 1em;
 }
 h1, p {
-    margin: 1em auto;
-    width: 500px;
+    margin: 1em 10%;
+    width: 80%;
 }
 a {
     color: black;
-}
-
-@media screen and (max-width: 500px) {
-    h1, p {
-        width: auto;
-        margin: 1em 5%;
-    }
 }
