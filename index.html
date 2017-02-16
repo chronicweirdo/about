@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Silviu D. Cacoveanu</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <script type="application/javascript" src="jquery.min.js"></script>
+    <script type="application/javascript" src="ismobile.js"></script>
+    <script type="application/javascript">
+        function setPadding() {
+            var clientHeight = document.documentElement.clientHeight;
+            var bodyHeight = $('body').height();
+            if (bodyHeight < clientHeight) {
+                var padding = (clientHeight - bodyHeight) / 2;
+                $('body').css('padding-top', padding);
+            }
+        }
+        $(document).ready(function() {
+            if (isMobile()) {
+                $('p.title').css('font-size', '4em');
+            }
+            setPadding();
+            $(window).resize(setPadding);
+        });
+    </script>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: "Courier New", Courier, monospace;
+    }
+    p {
+        margin-left: auto;
+        margin-right: auto;
+        width: 30em;
+        margin-top: 1em;
+    }
+
+    p.title, p.space {
+        margin-top: 0;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 2em;
+        width: 15em;
+        text-align: center;
+    }
+    @media (max-width: 500px) {
+        p, p.title, p.space {
+            padding: 0 5%;
+            margin: 0;
+            width: auto;
+        }
+    }
+    sup.elevated {
+        font-size: 1em;
+    }
+    a {
+        color: black;
+    }
+</style>
+</head>
+<body>
+    <div id="content">
+        <p class="title">Silviu<sup class="elevated">Dan</sup></p>
+        <p class="title">Cacoveanu</p>
+        <p class="space">&nbsp;</p>
+        <p>I'm blogging about programming and the pleasure of figuring things out <a href="http://blog.cacoveanu.com" target="_blank">here</a>. Ocasionally drawing a comic at <a href="http://chronicweirdo.com" target="_blank">chronicweirdo.com</a>.</p>
+    </div>
+</body>
+</html>
