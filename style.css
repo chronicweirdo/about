@@ -4,9 +4,9 @@
     font-family: "Courier New", Courier, monospace;
     word-wrap: break-word;
 }
-body {
+/*body {
     font-size: 25px;
-}
+}*/
 h1 {
     font-weight: bold;
     font-size: 1.5em;
@@ -26,3 +26,6 @@ a {
 #logo {
     max-width: 200px;
 }
+
+html{font-size:200%;}
+@media(min-width:60em){html{font-size: 150%}}
