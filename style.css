@@ -1,3 +1,7 @@
+:root {
+    --foreground-color: #000000;
+    --background-color: #ffffff;
+}
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +10,8 @@
 }
 body {
     font-size: 5vmin;
+    background-color: var(--background-color, #ffffff);
+    color: var(--foreground-color, #000000);
 }
 h1 {
     font-weight: bold;
@@ -19,7 +25,28 @@ h1, p {
     margin: 1em auto;
     width: 80%;
 }
+a {
+    color: var(--foreground-color, #000000);
+}
 
 #logo {
     width: 50vmin;
+    height: auto;
+}
+
+#path {
+    stroke: var(--foreground-color, #000000);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --foreground-color: #000000;
+        --background-color: #ffffff;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-color: #ffffff;
+        --background-color: #000000;
+    }
 }
