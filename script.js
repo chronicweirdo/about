@@ -4,15 +4,7 @@ var colors = []
 var REFRESH_RATE = 80
 var COLOR_TRANSITION_STEPS = 50
 
-var palettes = [
-    //["#8f00f2", "#00cffb", "#5cff00", "#fdfb00", "#fdae32", "#ff0c12"], // neon rainbow 2
-    //["00feca", "fdf200", "ff85ea", "7b61f8"], // neon 2
-    //["01ffc3", "01ffff", "ffb3fd", "9d72ff"], // neon 4
-    //["a0edff", "ebf875", "28cf75", "fe6b35"], // neon 5
-    //["d9eb4b", "00a9fe", "fd6bb6", "ef0888"], // neon 6
-    ["fef900", "03dddc", "ff822e", "f21a1d"] // neon 7
-    //["fcf340", "7fff00", "fb33db", "0310ea"] // neon 8
-]
+var palette = ["fef900", "03dddc", "ff822e", "f21a1d"]
 
 function getRGB(hexCode) {
     let h = hexCode.trim()
@@ -79,6 +71,6 @@ function getCycleColors(colors, stepsBetweenColors) {
 }
 
 window.onload = function() {
-    colors = getCycleColors(getRGBList(pickBasedOnTimestamp(palettes)), COLOR_TRANSITION_STEPS)
+    colors = getCycleColors(getRGBList(palette), COLOR_TRANSITION_STEPS)
     cycle()
 }
