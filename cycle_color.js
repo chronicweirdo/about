@@ -46,13 +46,11 @@ function pickBasedOnTimestamp(arr, refreshRate) {
 function cycleColor(elementId, property, palette, colorTransitionSteps = 50, refreshRate = 80) {
     let colors = getCycleColors(palette, colorTransitionSteps)
     let cycleFunction = function() {
-        setTimeout(function() {
-            let currentColor = pickBasedOnTimestamp(colors, refreshRate)
-            let cssColor = "rgb(" + currentColor.r + "," + currentColor.g + "," + currentColor.b + ")"
-            let path = document.getElementById(elementId)
-            path.style[property] = cssColor
-            cycleFunction()
-        }, refreshRate)
+        let currentColor = pickBasedOnTimestamp(colors, refreshRate)
+        let cssColor = "rgb(" + currentColor.r + "," + currentColor.g + "," + currentColor.b + ")"
+        let path = document.getElementById(elementId)
+        path.style[property] = cssColor
+        setTimeout(cycleFunction, refreshRate)
     }
     cycleFunction()
 }
